@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<br />
+<p> 
+    Internet access for devices is currently
+    {% if ruleStatus == True %}
+        <span class="text-success font-weight-bold">ON.</span>
+    {% else %}
+        <span class="text-warning font-weight-bold">OFF.</span>
+    {% endif %}
+</p>
+<form method="post">
+    <div class="radio-inline">
+        <label><input type="radio" name="ruleOption" value="True" {{ "checked=\"checked\"" if ruleStatus == True }}>On</label>
+    </div>
+    <div class="radio-inline">
+        <label><input type="radio" name="ruleOption" value="False" {{ "checked=\"checked\"" if ruleStatus == False }}>Off</label>
+    </div>
+    <input name="submit" type="submit" class="btn btn-primary btn-block" value="Save" />
+</form>
+{% endblock %}
