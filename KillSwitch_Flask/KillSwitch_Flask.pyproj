@@ -49,6 +49,7 @@
     <Content Include="conf.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="README.md" />
     <Content Include="requirements.txt" />
     <Content Include="KillSwitch_Flask\static\content\bootstrap.css" />
     <Content Include="KillSwitch_Flask\static\content\bootstrap.min.css" />
