@@ -49,6 +49,10 @@
     <Content Include="conf.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="start.sh">
+      <SubType>Code</SubType>
+    </Content>
+    <None Include="FolderProfile.pubxml" />
     <Content Include="KillSwitch_Flask\static\scripts\site.js">
       <SubType>Code</SubType>
     </Content>

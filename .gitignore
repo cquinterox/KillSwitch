@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/KillSwitch_Flask/FolderProfile.pubxml
+/KillSwitch_Flask/start.sh
+/KillSwitch_Flask/conf.json

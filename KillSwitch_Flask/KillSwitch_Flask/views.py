@@ -2,13 +2,14 @@
 Routes and views for the flask application.
 """
 
+import os
 import json
 from datetime import datetime
 from flask import render_template, request, jsonify
 from KillSwitch_Flask import app
 from KillSwitch_Flask import frontier
 
-with open("conf.json") as jsonData:
+with open(os.path.join(os.path.abspath('.'), '') + "conf.json") as jsonData:
     conf = json.load(jsonData)
 
 @app.route("/", methods=["GET","POST"])
