@@ -9,14 +9,14 @@
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-custom navbar-static-top">
         <div class="container">
             <div class="navbar-header">
                 <a href="/" class="navbar-brand">Internet KillSwitch</a>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container">
         {% block content %}{% endblock %}
         <hr />
         <footer>
@@ -26,6 +26,7 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
+    <script src="/static/scripts/site.js"></script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

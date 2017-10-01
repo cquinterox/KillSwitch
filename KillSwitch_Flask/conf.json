@@ -1,5 +1,26 @@
 {
-  "ruleId": 2,
   "routerAddress": "http://192.168.1.1",
-  "routerPassword": ""
+  "routerPassword": "RouterPassword",
+  "accessControlRules": [
+    {
+      "ruleId": 0,
+      "ruleName": "Kindle File",
+      "ruleDescription": "Child's Amazon tablet."
+    },
+    {
+      "ruleId": 1,
+      "ruleName": "iMac",
+      "ruleDescription": "Wife's desktop computer."
+    },
+    {
+      "ruleId": 2,
+      "ruleName": "Wii U",
+      "ruleDescription": "Childs's gaming system. Sometimes he uses this to watch YouTube."
+    },
+    {
+      "ruleId": 3,
+      "ruleName": "Roku",
+      "ruleDescription": "Livingroom Roku."
+    }
+  ]
 }

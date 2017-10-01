@@ -1,21 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-<br />
-<p> 
-    Internet access for devices is currently
-    {% if ruleStatus == True %}
-        <span class="text-success font-weight-bold">ON.</span>
-    {% else %}
-        <span class="text-warning font-weight-bold">OFF.</span>
-    {% endif %}
-</p>
-<form method="post">
-    <div class="radio-inline">
-        <label><input type="radio" name="ruleOption" value="True" {{ "checked=\"checked\"" if ruleStatus == True }}>On</label>
-    </div>
-    <div class="radio-inline">
-        <label><input type="radio" name="ruleOption" value="False" {{ "checked=\"checked\"" if ruleStatus == False }}>Off</label>
-    </div>
-    <input name="submit" type="submit" class="btn btn-primary btn-block" value="Save" />
-</form>
+<ul class="list-unstyled js-rules">
+    {% for rule in accessControlRules: %}
+    <li data-sort-string="{{ "0" if rule.active == False else "1" }}-{{rule.ruleName}}">
+        <div class="jumbotron container-fluid {{ "active" if rule.active == False else "inactive" }}">
+            <h1>{{rule.ruleName}}</h1>
+            <hr />
+            <p>{{rule.ruleDescription}}</p>
+            <label class="switch">
+                <input type="checkbox" data-rule-id="{{rule.ruleId}}" data-rule-name="{{rule.ruleName}}" {{ "checked=""checked" if rule.active == False }}>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}
